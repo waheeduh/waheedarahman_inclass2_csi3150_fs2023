@@ -63,3 +63,9 @@ body {
 .button-right:hover {
   background-color: #e293aa;
 }
+
+.hidden {
+    display: none;
+  }
+
+  

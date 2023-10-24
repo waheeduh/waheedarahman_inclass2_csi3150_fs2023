@@ -18,10 +18,36 @@
             features of the corresponding letters</p>
       </div>
     </div>
-    <div class="button-container">
-        <button class="button-left">A</button>
-        <button class="button-center">B</button>
-        <button class="button-right">C</button>
-    </div>
+
+ 
+<div class="button-container">
+    <button class="button-left" onclick="toggleImage('image-a')">A</button>
+    <button class="button-center" onclick="toggleImage('image-b')">B</button>
+    <button class="button-right" onclick="toggleImage('image-c')">C</button>
+  </div>
+  <div class="image-container">
+    <img id="image-a" class="hidden" src="/images/css-letter-a.png" alt="Image A">
+    <img id="image-b" class="hidden" src="/images/css-letter-b.png" alt="Image B">
+    <img id="image-c" class="hidden" src="/images/css-letter-c.png" alt="Image C">
+  </div>
+  
+  <script>
+    function toggleImage(imageId) {
+      var image = document.getElementById(imageId);
+      
+      // Get all images
+      var images = document.querySelectorAll(".image-container img");
+  
+      // Hide all images
+      images.forEach(function (img) {
+        img.style.display = "none";
+      });
+  
+      // Show the selected image
+      image.style.display = "block";
+    }
+  </script>
+  
+  
   </body>
 </html>
