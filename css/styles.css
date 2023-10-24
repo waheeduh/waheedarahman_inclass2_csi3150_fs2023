@@ -64,8 +64,41 @@ body {
   background-color: #e293aa;
 }
 
-.hidden {
-    display: none;
-  }
+.button-container-item {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
 
-  
+.image-popup {
+  position: absolute;
+  display: none;
+  top: -400px; /* Adjust this value to move the image higher above the buttons */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #020202;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+
+.hide-button {
+  display: block;
+  margin-top: 5px;
+}
+
+.button-left,
+.button-center,
+.button-right {
+  border: 1px solid #020202;
+  background-color: #ffffff;
+  color: #0a0a0a;
+  padding: 25px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: auto;
+  position: relative;
+  z-index: 2;
+}

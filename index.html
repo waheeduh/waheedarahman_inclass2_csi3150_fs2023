@@ -20,33 +20,44 @@
     </div>
 
  
-<div class="button-container">
-    <button class="button-left" onclick="toggleImage('image-a')">A</button>
-    <button class="button-center" onclick="toggleImage('image-b')">B</button>
-    <button class="button-right" onclick="toggleImage('image-c')">C</button>
-  </div>
-  <div class="image-container">
-    <img id="image-a" class="hidden" src="/images/css-letter-a.png" alt="Image A">
-    <img id="image-b" class="hidden" src="/images/css-letter-b.png" alt="Image B">
-    <img id="image-c" class="hidden" src="/images/css-letter-c.png" alt="Image C">
-  </div>
-  
-  <script>
-    function toggleImage(imageId) {
-      var image = document.getElementById(imageId);
+    <div class="button-container">
+      <div class="button-container-item">
+        <button class="button-left" onclick="toggleImage('image-a')">A</button>
+        <div class="image-popup" id="image-a">
+          <img src="/images/css-letter-a.png" alt="Image A">
+          <button class="hide-button" onclick="hideImage('image-a')">Hide</button>
+        </div>
+      </div>
+      <div class="button-container-item">
+        <button class="button-center" onclick="toggleImage('image-b')">B</button>
+        <div class="image-popup" id="image-b">
+          <img src="/images/css-letter-b.png" alt="Image B">
+          <button class="hide-button" onclick="hideImage('image-b')">Hide</button>
+        </div>
+      </div>
+      <div class="button-container-item">
+        <button class="button-right" onclick="toggleImage('image-c')">C</button>
+        <div class="image-popup" id="image-c">
+          <img src="/images/css-letter-c.png" alt="Image C">
+          <button class="hide-button" onclick="hideImage('image-c')">Hide</button>
+        </div>
+      </div>
+    </div>
+    
+    
       
-      // Get all images
-      var images = document.querySelectorAll(".image-container img");
-  
-      // Hide all images
-      images.forEach(function (img) {
-        img.style.display = "none";
-      });
-  
-      // Show the selected image
-      image.style.display = "block";
-    }
-  </script>
+    <script>
+      function toggleImage(imageId) {
+        var image = document.getElementById(imageId);
+        image.style.display = "block";
+      }
+    
+      function hideImage(imageId) {
+        var image = document.getElementById(imageId);
+        image.style.display = "none";
+      }
+    </script>
+    
   
   
   </body>
